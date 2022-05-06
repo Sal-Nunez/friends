@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Friend</h5>
+    <p class="card-text"><%= @friend.first_name %></p>
+    <p class="card-text"><%= @friend.last_name %></p>
+    <p class="card-text"><%= @friend.email %></p>
+    <p class="card-text"><%= @friend.phone %></p>
+    <p class="card-text"><%= @friend.twitter %></p>
+  </div>
+</div>
+
+<div class="my-3">
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-primary mb-3 border-dark" %> 
+  <%= link_to "Back to friends", friends_path, class:"btn btn-primary mb-3 border-dark" %>
+
+  <%= button_to "Destroy this friend", @friend, class:"btn btn-danger border-dark", method: :delete %>
+</div>

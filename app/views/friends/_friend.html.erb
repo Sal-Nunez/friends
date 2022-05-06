@@ -1,0 +1,28 @@
+<td>
+    <%= friend.first_name %>
+</td>
+
+  <td>
+    <%= friend.last_name %>
+  </td>
+
+  <td>
+    <%= friend.email %>
+  </td>
+
+  <td>
+    <%= friend.phone %>
+  </td>
+
+  <td>
+    <%= friend.twitter %>
+  </td>
+
+  <td>
+  <div class="d-flex">
+  <%= button_to "show", friend, class:"btn btn-link" %>
+  <%= button_to "edit", edit_friend_path(friend), class:"btn btn-link" %>
+  <%= button_to "delete", friend, method: :delete, class:"btn btn-link" %>
+  
+  </div>
+  </td>

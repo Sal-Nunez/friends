@@ -1,0 +1,26 @@
+
+<h1>Friends List</h1>
+
+<div id="friends">
+  <table class="table-dark table">
+    <thead class="thead-dark">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Twitter</th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody class="align-middle">
+  <% @friends.each do |friend| %>
+    <tr>
+    <%= render friend %>
+    </tr>
+  <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New friend", new_friend_path %>
